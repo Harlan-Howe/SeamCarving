@@ -17,7 +17,7 @@ class Carver:
         energy_image = cv2.cvtColor(energy_image, cv2.COLOR_BGR2GRAY)
         return energy_image
 
-    def generate_cumulative_energy_grid(self, energy_image) -> np.ndarray:
+    def generate_cumulative_energy_grid(self, energy_image: np.ndarray) -> np.ndarray:
         """
         Based on the information in self.energy_image, constructs the cumulative grid
         :return: the cumulative grid that goes with this energy grid.

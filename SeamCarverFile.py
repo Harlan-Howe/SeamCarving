@@ -161,6 +161,7 @@ class SeamCarver:
         else:
             panel.configure(image=img)
             panel.image = img
+        self.root.update_idletasks()
 
         return panel
 
@@ -175,6 +176,7 @@ class SeamCarver:
             self.source_cv_image = cv2.imread(path)
             self.update_source_and_energy()
             self.update_panel(self.original_image_panel, self.source_cv_image)
+
 
     def do_find_seam(self) -> None:
         """
